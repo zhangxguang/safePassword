@@ -152,6 +152,9 @@ item.alpha = 0.0; \
 // 判断是否为iPhone 6Plus/6sPlus
 #define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
 
+//判断是否为 iphoneX（全面屏iphone）
+#define iphoneX (double)(ZXG_SCREENH_HEIGHT / ZXG_SCREEN_WIDTH) > 1.8
+
 //获取系统版本
 #define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 

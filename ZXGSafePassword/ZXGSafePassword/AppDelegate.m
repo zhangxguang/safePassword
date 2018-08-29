@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZXGMacroDefinitionHeader.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,11 @@
     // Override point for customization after application launch.
     
     
-    
+    if (iphoneX) {
+        ZXGLog(@"是iphoneX");
+    }else {
+        ZXGLog(@"不是iphoneX");
+    }
     
     
     
