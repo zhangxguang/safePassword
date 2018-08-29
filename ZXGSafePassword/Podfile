@@ -6,4 +6,5 @@ pod 'MBProgressHUD'
 pod 'SDWebImage'
 pod 'MJRefresh'
 pod 'IQKeyboardManager'
+pod 'CYLTabBarController'
 end

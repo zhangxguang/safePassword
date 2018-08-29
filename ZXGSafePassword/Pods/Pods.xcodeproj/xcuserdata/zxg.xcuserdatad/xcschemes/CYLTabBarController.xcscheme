@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8CFA05F218B5CA934CAD9F663AD45B23"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "8206DA202B499B85B3CE93AADF678D27"
+               BlueprintName = "CYLTabBarController"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libSDWebImage.a">
+               BuildableName = "libCYLTabBarController.a">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
