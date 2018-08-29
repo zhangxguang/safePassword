@@ -15,12 +15,20 @@
 
 @end
 
+#pragma mark - ZXGUILabel
+@interface ZXGUILabel : UILabel
+
+@end
+
 #pragma mark - ZXGUIButton
 @interface ZXGUIButton : UIButton
 
 @end
 
+#pragma mark - ZXGUITextField
+@interface ZXGUITextField : UITextField
 
+@end
 
 
 

@@ -12,8 +12,34 @@
 
 @end
 
-#pragma mark - ZXGUIButton
+#pragma mark - ZXGUILabel
+@implementation ZXGUILabel
+- (void)commonInit
+{
+    
+}
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+@end
+
+#pragma mark - ZXGUIButton
 @implementation ZXGUIButton
 - (void)commonInit
 {
@@ -28,11 +54,11 @@
     [self setBackgroundImage:ButtonImageFromColor([UIColor whiteColor]) forState:UIControlStateNormal];
     [self setBackgroundImage:ButtonImageFromColor([UIColor colorWithRed:204/255.0 green:204/255.0 blue:204/255.0 alpha:0.5]) forState:UIControlStateDisabled];
     
-    self.layer.borderColor = [UIColor whiteColor].CGColor;
     //倒角
-    self.layer.cornerRadius = ZXGFixFont(38.5/2);
-    //    self.layer.borderWidth = JPFixFont(1.0);
-    self.layer.masksToBounds = YES;
+//    self.layer.cornerRadius = ZXGFixFont(38.5/2);
+//    self.layer.borderWidth = JPFixFont(1.0);
+//    self.layer.borderColor = [UIColor whiteColor].CGColor;
+//    self.layer.masksToBounds = YES;
 }
 
 //- (void)setEnabled:(BOOL)enabled
@@ -71,6 +97,52 @@
 }
 
 @end
+
+#pragma mark - ZXGUITextField
+@implementation ZXGUITextField
+
+- (void)commonInit
+{
+    //背景色
+    self.backgroundColor = [UIColor whiteColor];
+    //字体颜色
+    self.textColor = [UIColor blackColor];
+    //placeholder颜色
+    [self setValue:[UIColor blackColor] forKeyPath:@"_placeholderLabel.textColor"];
+    //字体大小
+    self.font = [UIFont systemFontOfSize:ZXGFixFont(16)];
+    //清除按钮
+    self.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ZXGFixFont(20), ZXGFixFont(38.5))];
+    self.leftView = paddingView;
+    self.leftViewMode = UITextFieldViewModeAlways;
+    
+    //倒角
+    self.layer.cornerRadius = ZXGFixFont(38.5/2);
+    self.layer.masksToBounds = YES;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+@end
+
+
 
 
 
