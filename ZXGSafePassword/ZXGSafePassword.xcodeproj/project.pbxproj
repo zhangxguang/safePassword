@@ -15,6 +15,8 @@
 		E32706B82136721E00CECAF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E32706B72136721E00CECAF8 /* main.m */; };
 		E32706C22136721E00CECAF8 /* ZXGSafePasswordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E32706C12136721E00CECAF8 /* ZXGSafePasswordTests.m */; };
 		E32706CD2136721E00CECAF8 /* ZXGSafePasswordUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E32706CC2136721E00CECAF8 /* ZXGSafePasswordUITests.m */; };
+		E3EDEAEB21367CFE00A387CE /* ZXGMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAEA21367CFE00A387CE /* ZXGMainVC.m */; };
+		E3EDEAEF21367D2400A387CE /* ZXGBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAEE21367D2400A387CE /* ZXGBaseViewController.m */; };
 		EDF9E7CEF8668EFE8A93A364 /* libPods-ZXGSafePassword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12745683CE392E53B8D78334 /* libPods-ZXGSafePassword.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,11 @@
 		E32706C82136721E00CECAF8 /* ZXGSafePasswordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZXGSafePasswordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E32706CC2136721E00CECAF8 /* ZXGSafePasswordUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGSafePasswordUITests.m; sourceTree = "<group>"; };
 		E32706CE2136721E00CECAF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3EDEAE921367CFE00A387CE /* ZXGMainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGMainVC.h; sourceTree = "<group>"; };
+		E3EDEAEA21367CFE00A387CE /* ZXGMainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGMainVC.m; sourceTree = "<group>"; };
+		E3EDEAED21367D2400A387CE /* ZXGBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGBaseViewController.h; sourceTree = "<group>"; };
+		E3EDEAEE21367D2400A387CE /* ZXGBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGBaseViewController.m; sourceTree = "<group>"; };
+		E3EDEAF021367EA300A387CE /* ZXGMacroDefinitionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXGMacroDefinitionHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +132,8 @@
 		E32706A72136721D00CECAF8 /* ZXGSafePassword */ = {
 			isa = PBXGroup;
 			children = (
+				E3EDEAEC21367D0500A387CE /* ZXGBaseClass */,
+				E3EDEAE821367CD700A387CE /* ZXGMainVC */,
 				E32706A82136721D00CECAF8 /* AppDelegate.h */,
 				E32706A92136721D00CECAF8 /* AppDelegate.m */,
 				E32706AB2136721D00CECAF8 /* ViewController.h */,
@@ -154,6 +163,25 @@
 				E32706CE2136721E00CECAF8 /* Info.plist */,
 			);
 			path = ZXGSafePasswordUITests;
+			sourceTree = "<group>";
+		};
+		E3EDEAE821367CD700A387CE /* ZXGMainVC */ = {
+			isa = PBXGroup;
+			children = (
+				E3EDEAE921367CFE00A387CE /* ZXGMainVC.h */,
+				E3EDEAEA21367CFE00A387CE /* ZXGMainVC.m */,
+			);
+			path = ZXGMainVC;
+			sourceTree = "<group>";
+		};
+		E3EDEAEC21367D0500A387CE /* ZXGBaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				E3EDEAF021367EA300A387CE /* ZXGMacroDefinitionHeader.h */,
+				E3EDEAED21367D2400A387CE /* ZXGBaseViewController.h */,
+				E3EDEAEE21367D2400A387CE /* ZXGBaseViewController.m */,
+			);
+			path = ZXGBaseClass;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,7 +357,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3EDEAEF21367D2400A387CE /* ZXGBaseViewController.m in Sources */,
 				E32706AD2136721D00CECAF8 /* ViewController.m in Sources */,
+				E3EDEAEB21367CFE00A387CE /* ZXGMainVC.m in Sources */,
 				E32706B82136721E00CECAF8 /* main.m in Sources */,
 				E32706AA2136721D00CECAF8 /* AppDelegate.m in Sources */,
 			);
