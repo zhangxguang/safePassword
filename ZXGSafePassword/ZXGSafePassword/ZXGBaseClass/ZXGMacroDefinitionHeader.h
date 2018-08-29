@@ -13,6 +13,10 @@
 #define ZXG_SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 #define ZXG_SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height
 
+//适配UI标注图为6的尺寸
+#define ZXGFixFont(fontSize)  ((ZXG_SCREEN_WIDTH >= 414) ? (fontSize) * 1.1  : (fontSize))
+#define ZXGFixGap(gap)        ((gap) * ZXG_SCREENH_HEIGHT / 375.0)
+
 /*
 //需要横屏或者竖屏，获取屏幕宽度与高度
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 // 当前Xcode支持iOS8及以上

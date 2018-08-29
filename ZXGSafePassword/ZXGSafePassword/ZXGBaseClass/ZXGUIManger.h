@@ -8,11 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "ZXGMacroDefinitionHeader.h"
+#import "ZXGHelpApis.h"
 #import <UIKit/UIKit.h>
 
 @interface ZXGUIManger : NSObject
 
 @end
+
+#pragma mark - ZXGUIButton
+@interface ZXGUIButton : UIButton
+
+@end
+
+
+
+
+
+
 
 #pragma mark - UIColor(WebColorString)
 @interface UIColor(WebColorString)
