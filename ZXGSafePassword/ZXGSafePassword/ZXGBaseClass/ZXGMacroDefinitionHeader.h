@@ -120,8 +120,7 @@ item.alpha = 0.0; \
 //#define kGetViewY(view)      view.frame.origin.y
 
 //获取图片资源
-#define kGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
-
+#define ZXGGetImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imageName]]
 
 //12.获取当前语言
 #define ZXGCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])

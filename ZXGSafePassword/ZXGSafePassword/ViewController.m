@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZXGUIManger.h"
 
 @interface ViewController ()
 
@@ -18,9 +19,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-    
-    
+    self.view.backgroundColor = [UIColor colorWithWebColorString:@"#49BDF0"];
+//    self.view.backgroundColor = ZXGRGBColor(0, 140, 255);
     
     
     
