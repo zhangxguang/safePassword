@@ -20,6 +20,8 @@
 		E3EDEAF4213681D300A387CE /* ZXGrazyID.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAF3213681D300A387CE /* ZXGrazyID.m */; };
 		E3EDEAF72136833E00A387CE /* ZXGUIManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAF62136833E00A387CE /* ZXGUIManger.m */; };
 		E3EDEAFA2136892100A387CE /* ZXGHelpApis.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAF92136892100A387CE /* ZXGHelpApis.m */; };
+		E3EDEAFD21368F6600A387CE /* ZXGUIColorManger.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAFC21368F6600A387CE /* ZXGUIColorManger.m */; };
+		E3EDEB00213690BC00A387CE /* ZXGCreatGradualChangeColorImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E3EDEAFF213690BC00A387CE /* ZXGCreatGradualChangeColorImage.m */; };
 		EDF9E7CEF8668EFE8A93A364 /* libPods-ZXGSafePassword.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12745683CE392E53B8D78334 /* libPods-ZXGSafePassword.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,10 @@
 		E3EDEAF62136833E00A387CE /* ZXGUIManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUIManger.m; sourceTree = "<group>"; };
 		E3EDEAF82136892100A387CE /* ZXGHelpApis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGHelpApis.h; sourceTree = "<group>"; };
 		E3EDEAF92136892100A387CE /* ZXGHelpApis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGHelpApis.m; sourceTree = "<group>"; };
+		E3EDEAFB21368F6600A387CE /* ZXGUIColorManger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGUIColorManger.h; sourceTree = "<group>"; };
+		E3EDEAFC21368F6600A387CE /* ZXGUIColorManger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGUIColorManger.m; sourceTree = "<group>"; };
+		E3EDEAFE213690BC00A387CE /* ZXGCreatGradualChangeColorImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXGCreatGradualChangeColorImage.h; sourceTree = "<group>"; };
+		E3EDEAFF213690BC00A387CE /* ZXGCreatGradualChangeColorImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXGCreatGradualChangeColorImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +200,10 @@
 				E3EDEAEE21367D2400A387CE /* ZXGBaseViewController.m */,
 				E3EDEAF52136833E00A387CE /* ZXGUIManger.h */,
 				E3EDEAF62136833E00A387CE /* ZXGUIManger.m */,
+				E3EDEAFB21368F6600A387CE /* ZXGUIColorManger.h */,
+				E3EDEAFC21368F6600A387CE /* ZXGUIColorManger.m */,
+				E3EDEAFE213690BC00A387CE /* ZXGCreatGradualChangeColorImage.h */,
+				E3EDEAFF213690BC00A387CE /* ZXGCreatGradualChangeColorImage.m */,
 			);
 			path = ZXGBaseClass;
 			sourceTree = "<group>";
@@ -384,7 +394,9 @@
 				E32706AD2136721D00CECAF8 /* ViewController.m in Sources */,
 				E3EDEAF72136833E00A387CE /* ZXGUIManger.m in Sources */,
 				E3EDEAEB21367CFE00A387CE /* ZXGMainVC.m in Sources */,
+				E3EDEB00213690BC00A387CE /* ZXGCreatGradualChangeColorImage.m in Sources */,
 				E32706B82136721E00CECAF8 /* main.m in Sources */,
+				E3EDEAFD21368F6600A387CE /* ZXGUIColorManger.m in Sources */,
 				E3EDEAF4213681D300A387CE /* ZXGrazyID.m in Sources */,
 				E32706AA2136721D00CECAF8 /* AppDelegate.m in Sources */,
 				E3EDEAFA2136892100A387CE /* ZXGHelpApis.m in Sources */,
