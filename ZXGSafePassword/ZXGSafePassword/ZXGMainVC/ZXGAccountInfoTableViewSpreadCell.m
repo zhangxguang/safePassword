@@ -26,12 +26,15 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        
-        
-        
-        
-        
-        
+        UILabel *tipsLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:tipsLabel];
+        [tipsLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.contentView.mas_top);
+            make.left.equalTo(self.contentView.mas_left);
+            make.right.equalTo(self.contentView.mas_right);
+            make.bottom.equalTo(self.contentView.mas_bottom);
+        }];
+        tipsLabel.text = @"43534543534534543543";
         
     }
     return self;

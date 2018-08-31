@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ZXGUIManger.h"
 #import "ZXGAccountInfoTableViewCell.h"
+#import "ZXGAccountInfoTableViewCellModel.h"
+#import "ZXGAccountInfoTableViewSpreadCell.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -23,10 +25,27 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    self.view.backgroundColor = [UIColor colorWithWebColorString:@"#49BDF0"];
-//    self.view.backgroundColor = ZXGRGBColor(0, 140, 255);
-    
     self.accountInfoTableViewData = @[@"11", @"22", @"33"];
+    
+    NSMutableArray *mutArray = [NSMutableArray array];
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel01 = [[ZXGAccountInfoTableViewCellModel alloc] init];
+    tableViewCellModel01.spreadStatus = @0;
+    [mutArray addObject:tableViewCellModel01];
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel02 = [[ZXGAccountInfoTableViewCellModel alloc] init];
+    tableViewCellModel02.spreadStatus = @1;
+    [mutArray addObject:tableViewCellModel02];
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel03 = [[ZXGAccountInfoTableViewCellModel alloc] init];
+    tableViewCellModel03.spreadStatus = @1;
+    [mutArray addObject:tableViewCellModel03];
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel04 = [[ZXGAccountInfoTableViewCellModel alloc] init];
+    tableViewCellModel04.spreadStatus = @1;
+    [mutArray addObject:tableViewCellModel04];
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel05 = [[ZXGAccountInfoTableViewCellModel alloc] init];
+    tableViewCellModel05.spreadStatus = @0;
+    [mutArray addObject:tableViewCellModel05];
+    
+    self.accountInfoTableViewData = [mutArray copy];
+    
     
     [self addSubViews];
 }
@@ -48,28 +67,45 @@
     }];
 }
 
-
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return self.accountInfoTableViewData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    ZXGAccountInfoTableViewCell *cell = [ZXGAccountInfoTableViewCell cellWithTableView:tableView];
-    return cell;
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel = self.accountInfoTableViewData[indexPath.row];
+    if ([tableViewCellModel.spreadStatus integerValue] == 0) {
+        //
+        ZXGAccountInfoTableViewCell *cell = [ZXGAccountInfoTableViewCell cellWithTableView:tableView];
+        return cell;
+    }else{
+        ZXGAccountInfoTableViewSpreadCell *spreadCell = [ZXGAccountInfoTableViewSpreadCell cellWithTableView:tableView];
+        return spreadCell;
+    }
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ZXGFixFont(40);
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel = self.accountInfoTableViewData[indexPath.row];
+    if ([tableViewCellModel.spreadStatus integerValue] == 0) {
+        return ZXGFixFont(40);
+    }else{
+        return ZXGFixFont(60);
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ZXGAccountInfoTableViewCellModel *tableViewCellModel = self.accountInfoTableViewData[indexPath.row];
+    if ([tableViewCellModel.spreadStatus integerValue] == 0) {
+        tableViewCellModel.spreadStatus = @1;
+    }else{
+        tableViewCellModel.spreadStatus = @0;
+    }
+    [self.accountInfoTableView reloadData];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
